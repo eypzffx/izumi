@@ -13,22 +13,34 @@ services:
         required: true
       - key: PREFIX
         sync: false
+        required: true
       - key: SUDO
         sync: false
-        require: true
+        required: false
       - key: MODE
+        sync: false
         value: "private"
-        sync: true
-        require: true
       - key: LOG_MSG
-        value: "false"
-        sync: true
-        require: false
-      - key: READ_MSG
-        value: "false"
-        sync: true
-        require: false
-      - key: PORT
-        value: "3000"
-        sync: true
-        require: false
+        sync: false
+        value: "true"
+      - key: ERROR_MSG
+        sync: false
+        value: "true"
+      - key: OWNER_NAME
+        sync: false
+        value: "Eʏᴘᴢ"
+      - key: BOT_NAME
+        sync: false
+        value: "Iᴢᴜᴍɪ-ᴍᴅ"
+      - key: STICKER_PACKNAME
+        sync: false
+        value: "Iᴢᴜᴍɪ-ᴍᴅ,Eʏᴘᴢ"
+      - key: AUDIO_DATA
+        sync: false
+        value: "Eʏᴘᴢ;Iᴢᴜᴍɪ-ᴍᴅ;https://cdn.eypz.ct.ws/url/15-05-25_06-18_w9fi.png"
+      - key: MENU_URL
+        sync: false
+        value: "https://cdn.eypz.ct.ws/url/15-05-25_06-18_w9fi.png"
+      - key: CAPTION
+        sync: false
+        value: "Made with 🤍"
