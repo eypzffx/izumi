@@ -3,14 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 function moveFiles(srcDir, destDir) {
-  const files = fs.readdirSync(srcDir, { withFileTypes: true });
-  for (const file of files) {
-    if (file.name === '.' || file.name === '..' || file.name === '.git') continue;
+  const entries = fs.readdirSync(srcDir, { withFileTypes: true });
 
-    const srcPath = path.join(srcDir, file.name);
-    const destPath = path.join(destDir, file.name);
+  for (const entry of entries) {
+    if (entry.name === '.' || entry.name === '..' || entry.name === '.git') continue;
 
-    // Remove destination if exists
+    const srcPath = path.join(srcDir, entry.name);
+    const destPath = path.join(destDir, entry.name);
+
     if (fs.existsSync(destPath)) {
       if (fs.lstatSync(destPath).isDirectory()) {
         fs.rmSync(destPath, { recursive: true, force: true });
@@ -22,11 +22,10 @@ function moveFiles(srcDir, destDir) {
     fs.renameSync(srcPath, destPath);
   }
 
-  // Remove the source folder after moving files (except .git)
-  fs.rmdirSync(srcDir, { recursive: true });
+  fs.rmdirSync(srcDir);
 }
 
-// Step 1: Write all environment variables to config.env
+// Create config.env from Render env variables
 let config = '';
 for (const key in process.env) {
   config += `${key}=${process.env[key]}\n`;
