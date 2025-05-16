@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "izumi": "github:Akshay-Eypz/izumi-bot"
-  },
-  "scripts": {
-    "start": "node bot.js"
-  }
-}
