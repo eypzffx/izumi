@@ -1,14 +1,8 @@
 {
-  "name": "izumi-bot-render",
-  "version": "1.0.0",
-  "description": "Render deploy wrapper for Izumi bot",
-  "main": "bot.js",
+  "dependencies": {
+    "izumi": "github:Akshay-Eypz/izumi-bot"
+  },
   "scripts": {
     "start": "node bot.js"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "engines": {
-    "node": ">=16"
   }
 }
