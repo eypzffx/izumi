@@ -15,11 +15,20 @@ services:
         sync: false
       - key: SUDO
         sync: false
+        require: true
       - key: MODE
         value: "private"
+        sync: true
+        require: true
       - key: LOG_MSG
         value: "false"
+        sync: true
+        require: false
       - key: READ_MSG
         value: "false"
+        sync: true
+        require: false
       - key: PORT
         value: "3000"
+        sync: true
+        require: false
