@@ -5,12 +5,25 @@ const path = require('path');
 function moveFiles(srcDir, destDir) {
   const files = fs.readdirSync(srcDir, { withFileTypes: true });
   for (const file of files) {
-    if (file.name === '.' || file.name === '..') continue;
+    if (file.name === '.' || file.name === '..' || file.name === '.git') continue;
+
     const srcPath = path.join(srcDir, file.name);
     const destPath = path.join(destDir, file.name);
+
+    // Remove destination if exists
+    if (fs.existsSync(destPath)) {
+      if (fs.lstatSync(destPath).isDirectory()) {
+        fs.rmSync(destPath, { recursive: true, force: true });
+      } else {
+        fs.unlinkSync(destPath);
+      }
+    }
+
     fs.renameSync(srcPath, destPath);
   }
-  fs.rmdirSync(srcDir);
+
+  // Remove the source folder after moving files (except .git)
+  fs.rmdirSync(srcDir, { recursive: true });
 }
 
 // Step 1: Write all environment variables to config.env
