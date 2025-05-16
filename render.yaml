@@ -19,28 +19,28 @@ services:
         required: false
       - key: MODE
         sync: false
-        value: "private"
+        required: false
       - key: LOG_MSG
         sync: false
-        value: "true"
+        required: false
       - key: ERROR_MSG
         sync: false
-        value: "true"
+        required: false
       - key: OWNER_NAME
         sync: false
-        value: "Eʏᴘᴢ"
+        required: false
       - key: BOT_NAME
         sync: false
-        value: "Iᴢᴜᴍɪ-ᴍᴅ"
+        required: false
       - key: STICKER_PACKNAME
         sync: false
-        value: "Iᴢᴜᴍɪ-ᴍᴅ,Eʏᴘᴢ"
+        required: false
       - key: AUDIO_DATA
         sync: false
-        value: "Eʏᴘᴢ;Iᴢᴜᴍɪ-ᴍᴅ;https://cdn.eypz.ct.ws/url/15-05-25_06-18_w9fi.png"
+        required: false
       - key: MENU_URL
         sync: false
-        value: "https://cdn.eypz.ct.ws/url/15-05-25_06-18_w9fi.png"
+        required: false
       - key: CAPTION
         sync: false
-        value: "Made with 🤍"
+        required: false
