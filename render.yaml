@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: izumi-md
+    repo: https://github.com/Akshay-Eypz/izumi.git
+    branch: main
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: SESSION_ID
+        sync: false
+        required: true
+      - key: PREFIX
+        sync: false
+      - key: MODE
+        value: "private"
+      - key: LOG_MSG
+        value: "true"
+      - key: READ_MSG
+        value: "false"
+      - key: ADMIN_ACCESS
+        value: "false"
+      - key: OWNER_NAME
+        value: "Eʏᴘᴢ"
+      - key: BOT_NAME
+        value: "Iᴢᴜᴍɪ-ᴍᴅ"
+      - key: STICKER_PACKNAME
+        value: "Iᴢᴜᴍɪ-ᴍᴅ,Eʏᴘᴢ"
+      - key: AUDIO_DATA
+        value: "Eʏᴘᴢ;Iᴢᴜᴍɪ-ᴍᴅ;https://cdn.eypz.ct.ws/url/15-05-25_06-18_w9fi.png"
+      - key: AUTHOR
+        value: "Eʏᴘᴢ"
+      - key: LANGUAGE
+        value: "EN"
+      - key: CAPTION
+        value: "Made with 🤍"
+      - key: MENU_URL
+        value: "https://cdn.eypz.ct.ws/url/15-05-25_06-18_w9fi.png"
+      - key: PORT
+        value: "3000"
