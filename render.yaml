@@ -50,6 +50,12 @@ services:
       - key: MENU_TYPE
         sync: false
         require: false
+      - key: ANTI_LINK
+        sync: false
+        require: false
+      - key: ANTI_WORD
+        sync: false
+        require: false
       - key: PORT
         sync: false
         require: true
