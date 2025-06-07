@@ -47,6 +47,9 @@ services:
       - key: AUTHOR
         sync: false
         require: false
+      - key: MENU_TYPE
+        sync: false
+        require: false
       - key: PORT
         sync: false
         require: true
