@@ -59,3 +59,9 @@ services:
       - key: PORT
         sync: false
         require: true
+      - key: RENDER_API_KEY
+        sync: false
+        require: true
+      - key: RENDER_SERVICE_ID
+        sync: false
+        require: true
