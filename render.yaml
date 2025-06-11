@@ -1,7 +1,7 @@
 services:
   - type: web
     name: izumi-md
-    repo: https://github.com/Akshay-Eypz/izumi
+    repo: https://github.com/Akshay-Eypz/izumi-bot
     branch: main
     env: docker
     dockerfilePath: Dockerfile
