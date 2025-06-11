@@ -13,7 +13,7 @@ services:
         required: true
       - key: PREFIX
         sync: false
-        required: true
+        required: false
       - key: SUDO
         sync: false
         required: false
@@ -25,10 +25,10 @@ services:
         require: true
       - key: RENDER_API_KEY
         sync: false
-        require: true
+        require: false
       - key: RENDER_SERVICE_ID
         sync: false
-        require: true
+        require: false
       - key: DATABASE_URL
         sync: false
-        require: true
+        require: false
