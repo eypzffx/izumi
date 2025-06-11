@@ -20,42 +20,6 @@ services:
       - key: MODE
         sync: false
         required: false
-      - key: LOG_MSG
-        sync: false
-        required: false
-      - key: ERROR_MSG
-        sync: false
-        required: false
-      - key: OWNER_NAME
-        sync: false
-        required: false
-      - key: BOT_NAME
-        sync: false
-        required: false
-      - key: STICKER_PACKNAME
-        sync: false
-        required: false
-      - key: AUDIO_DATA
-        sync: false
-        required: false
-      - key: MENU_URL
-        sync: false
-        required: false
-      - key: CAPTION
-        sync: false
-        required: false
-      - key: AUTHOR
-        sync: false
-        require: false
-      - key: MENU_TYPE
-        sync: false
-        require: false
-      - key: ANTI_LINK
-        sync: false
-        require: false
-      - key: ANTI_WORD
-        sync: false
-        require: false
       - key: PORT
         sync: false
         require: true
@@ -63,5 +27,8 @@ services:
         sync: false
         require: true
       - key: RENDER_SERVICE_ID
+        sync: false
+        require: true
+      - key: DATABASE_URL
         sync: false
         require: true
