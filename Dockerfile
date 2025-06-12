@@ -21,7 +21,7 @@ WORKDIR /root/rndr/
 RUN yarn install
 
 # Expose port for Render/Koyeb or other platforms
-EXPOSE 8080
+EXPOSE 8000
 
 # Start the bot using PM2
 CMD ["pm2-runtime", "ecosystem.config.js"]
