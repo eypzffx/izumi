@@ -16,4 +16,4 @@ WORKDIR /root/rndr
 RUN npm install --legacy-peer-deps
 
 # Start using PM2
-CMD ["pm2-runtime", "ecosystem.config.js"]
+CMD ["npm", "start"]
